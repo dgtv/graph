@@ -7,6 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Talkable -->
+    <script>
+      window._talkableq = window._talkableq || [];
+
+      _talkableq.push(['init', {
+        site_id: "local",
+        server: "http://localhost:3000",
+      }]);
+
+      window._talkableq.push(['authenticate_customer', {
+      }]);
+
+      window._talkableq.push(['register_affiliate', {}]);
+    </script>
+    <script async src="//curebit-development.s3.amazonaws.com/integration/clients/local.min.js" type="text/javascript">
+    </script>
+    <!-- End Talkable -->
   </head>
 
   <body>
